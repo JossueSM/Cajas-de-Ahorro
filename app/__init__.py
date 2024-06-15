@@ -12,4 +12,5 @@ CORS(app)
 # Importa los controladores después de inicializar db para evitar problemas circulares
 from app.controllers import cuenta_controller
 from app.controllers import movimiento_controller
+from app.controllers import reporte_controller
 
