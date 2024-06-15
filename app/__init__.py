@@ -14,4 +14,5 @@ from app.controllers import cuenta_controller
 from app.controllers import movimiento_controller
 from app.controllers import reporte_controller
 from app.controllers import socio_controller
+from app.controllers import usuario_controller
 
