@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+from config import TestConfig, Config
 from flasgger import Swagger
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1234@localhost/flask'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Evita warnings
+app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 CORS(app)
