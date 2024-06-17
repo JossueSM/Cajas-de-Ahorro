@@ -14,7 +14,7 @@ class TestFlaskRoutes(TestCase):
     def tearDown(self):
         db.session.remove()
         # db.drop_all()  # Elimina todas las tablas al finalizar la prueba
-        
+
     def test_crear_socio(self):
         # Prueba de la creación de una cuenta
         response = self.client.post("/socio", data=json.dumps({
@@ -23,3 +23,8 @@ class TestFlaskRoutes(TestCase):
         }), content_type='application/json')
         self.assertEqual(response.status_code, 200)
         self.assertIn('Socio', response.json['mensaje'])
+
+    def test_obtener_socio(self):
+        response = self.client.get("/socio", data=json.dumps({"id_usuario": "1"}), content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('estado_socio', response.json[0])
