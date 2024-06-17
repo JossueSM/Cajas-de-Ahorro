@@ -24,3 +24,8 @@ class TestFlaskRoutes(TestCase):
         }), content_type='application/json')
         self.assertEqual(response.status_code, 200)
         self.assertIn('Reporte', response.json['mensaje'])
+    
+    def test_obtener_reporte(self):
+        response = self.client.get("/reporte", data=json.dumps({"id_usuario": "1"}), content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('description_reporte', response.json[0])
