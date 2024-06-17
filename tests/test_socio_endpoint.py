@@ -28,3 +28,8 @@ class TestFlaskRoutes(TestCase):
         response = self.client.get("/socio", data=json.dumps({"id_usuario": "1"}), content_type='application/json')
         self.assertEqual(response.status_code, 200)
         self.assertIn('estado_socio', response.json[0])
+    
+    def test_socios(self):
+        response = self.client.get("/socios")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('estado_socio', response.json[0])
