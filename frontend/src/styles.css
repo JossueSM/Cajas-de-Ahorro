@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #003366;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a, header h1 {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+nav {
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background: #e8491d;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="double"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background: #003366;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #002244;
+}

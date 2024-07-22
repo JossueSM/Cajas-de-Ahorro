@@ -7,6 +7,18 @@ class TestFlaskRoutes(TestCase):
     def create_app(self):
         app.config.from_object(TestConfig)
         return app
+    
+    @classmethod
+    def setUpClass(cls):
+        # Configurar la aplicación Flask para las pruebas
+        cls.app = app
+        cls.app.config.from_object(TestConfig)
+        cls.client = cls.app.test_client()
+
+        # Eliminar todas las tablas de la base de datos antes de iniciar las pruebas
+        with cls.app.app_context():
+            db.drop_all()
+            db.create_all()
 
     def setUp(self):
         db.create_all()  # Crea las tablas necesarias para la prueba
