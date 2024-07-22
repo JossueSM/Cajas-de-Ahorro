@@ -1,27 +1,30 @@
 <main>
-    <div class="container">
-        <h2>Reportes de Cuenta</h2>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Reportes de Cuenta</h2>
         <form action="/reportes" method="post">
-            <div>
-                <label for="id_reporte">ID Reporte</label>
-                <input type="number" id="id_reporte" name="id_reporte">
-            </div>
-            <div>
-                <label for="id_usuario">ID Usuario</label>
-                <input type="text" id="id_usuario" name="id_usuario">
-            </div>
-            <div>
-                <label for="id_movimiento">ID Movimiento</label>
-                <input type="number" id="id_movimiento" name="id_movimiento">
-            </div>
-            <div>
-                <label for="description_reporte">Descripción</label>
-                <input type="text" id="description_reporte" name="description_reporte">
-            </div>
-            <input type="submit" value="Generar Reporte">
+            <fieldset class="border p-4">
+                <legend class="w-auto px-2">Información del Reporte</legend>
+                <div class="form-group">
+                    <label for="id_reporte">ID Reporte</label>
+                    <input type="number" class="form-control" id="id_reporte" name="id_reporte" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_usuario">ID Usuario</label>
+                    <input type="text" class="form-control" id="id_usuario" name="id_usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_movimiento">ID Movimiento</label>
+                    <input type="number" class="form-control" id="id_movimiento" name="id_movimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="description_reporte">Descripción</label>
+                    <textarea class="form-control" id="description_reporte" name="description_reporte" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Generar Reporte</button>
+            </fieldset>
         </form>
     </div>
 </main>
-<footer>
+<footer class="text-center mt-5">
     <p>&copy; 2024 Banco Confianza. Todos los derechos reservados.</p>
 </footer>
