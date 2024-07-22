@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco - Movimientos</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Banco Confianza</h1>
+            <nav>
+                <a href="home.html">Inicio</a>
+                <a href="crear_cuenta.html">Crear Cuenta</a>
+                <a href="hacerse_socio.html">Hacerse Socio</a>
+                <a href="movimientos.html">Movimientos</a>
+                <a href="reportes.html">Reportes</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Movimientos Bancarios</h2>
+            <form action="/movimientos" method="post">
+                <div>
+                    <label for="tipo_movimiento">Tipo de Movimiento</label>
+                    <input type="text" id="tipo_movimiento" name="tipo_movimiento">
+                </div>
+                <div>
+                    <label for="numero_cuenta">Número de Cuenta</label>
+                    <input type="text" id="numero_cuenta" name="numero_cuenta">
+                </div>
+                <input type="submit" value="Realizar Movimiento">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banco Confianza. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
