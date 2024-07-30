@@ -1,0 +1,14 @@
+<h2>Hacerse Socio</h2>
+<form [formGroup]="form_socio" method="post">
+    <div>
+        <label>Usuario</label>
+        <input type="text" id="estado_socio" formControlName="id_usuario" placeholder="ID usuario">
+    </div>
+    <div>
+        <select id="estado_socio" formControlName="estado_socio">
+            <option value="false">Ascendido a cliente</option>
+            <option value="true">Socio</option>
+        </select>
+    </div>
+    <input type="submit" value="Hacerse Socio" (click)="crear_socio()">
+</form>
