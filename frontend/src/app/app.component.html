@@ -1,13 +1,24 @@
 <header>
   <div class="container">
-      <h1>Banco Confianza</h1>
-      <nav>
-          <a href="home.html">Inicio</a>
-          <a href="crear_cuenta.html">Crear Cuenta</a>
-          <a href="hacerse_socio.html">Hacerse Socio</a>
-          <a href="movimientos.html">Movimientos</a>
-          <a routerLink="/reportes" routerLinkActive="active" ariaCurrentWhenActive="page">Reportes</a>
-      </nav>
+    <h1>Banco Confianza</h1>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Inicio</a>
+      <a routerLink="/crear-cuenta" routerLinkActive="active" ariaCurrentWhenActive="page">Crear Cuenta</a>
+      <a routerLink="/socio" routerLinkActive="active" ariaCurrentWhenActive="page">Hacerse Socio</a>
+      <a routerLink="/movimientos" routerLinkActive="active" ariaCurrentWhenActive="page">Movimientos</a>
+      <a routerLink="/reportes" routerLinkActive="active" ariaCurrentWhenActive="page">Reportes</a>
+      <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+      <a routerLink="/registro" routerLinkActive="active" ariaCurrentWhenActive="page">Registro</a>
+    </nav>
   </div>
 </header>
-<router-outlet/>
+
+<main>
+  <div class="container">
+    <router-outlet />
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024 Banco Confianza. Todos los derechos reservados.</p>
+</footer>

@@ -1,0 +1,20 @@
+<h2>Crear Cuenta</h2>
+<form [formGroup]="form_cuenta" method="post">
+    <div>
+        <label for="numero_cuenta">Número de Cuenta</label>
+        <input type="text" id="numero_cuenta" formControlName="numero_cuenta">
+    </div>
+    <div>
+        <label for="tipo_cuenta">Tipo de Cuenta</label>
+        <input type="text" id="tipo_cuenta" formControlName="tipo_cuenta">
+    </div>
+    <div>
+        <label for="saldo_cuenta">Saldo Inicial</label>
+        <input type="number" id="saldo_cuenta" formControlName="saldo_cuenta" step="0.01">
+    </div>
+    <div>
+        <label for="id_usuario">ID Usuario</label>
+        <input type="text" id="id_usuario" formControlName="id_usuario">
+    </div>
+    <input type="submit" value="Crear Cuenta" (click)="crearCuenta()">
+</form>
