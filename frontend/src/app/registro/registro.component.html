@@ -1,0 +1,20 @@
+<h2>Registro usuarios</h2>
+<form [formGroup]="form_registro">
+    <div>
+        <label>Nombre</label>
+        <input type="text" id="user" formControlName="user">
+    </div>
+    <div>
+        <label>Cedula</label>
+        <input type="text" id="cedula" formControlName="cedula" [maxLength]="10" [minlength]="10">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password">
+    </div>
+    <input type="submit" value="Registrarse" (click)="registrar_usuario()">
+</form>
