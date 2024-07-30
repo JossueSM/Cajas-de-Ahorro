@@ -1,1 +1,15 @@
-<p>movimientos works!</p>
+<h2>Movimientos Bancarios</h2>
+<form [formGroup]="form_movimiento">
+    <div>
+        <select id="tipo_movimiento" formControlName="tipo_movimiento">
+            <option value="deposito">Depósito</option>
+            <option value="retiro">Retiro</option>
+            <option value="transferencia">Transferencia</option>
+        </select>
+    </div>
+    <div>
+        <label for="numero_cuenta">Número de Cuenta</label>
+        <input type="text" id="numero_cuenta" formControlName="numero_cuenta">
+    </div>
+    <input type="submit" value="Realizar Movimiento" (click)="crear_movimiento()">
+</form>
